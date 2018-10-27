@@ -1,9 +1,14 @@
 # Google cloud deploy
 
+# Configurate 3 Nodes: node[0-2]
 LOWNODENUM=0
 HIGHNODENUM=2
+
+# Specify System 
 # GSYSTEM="ubuntu-1404-trusty-v20181022"
 GSYSTEM="ubuntu-1604-xenial-v20181023"
+
+
 
 # Instance Create
 for i in `seq $LOWNODENUM $HIGHNODENUM`; do	

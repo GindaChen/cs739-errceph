@@ -1,5 +1,5 @@
-# You will have to go into each node and type the commands... or init it when init the machine
-i=0
+#!/bin/bash
+# Inject a custom key into the node
 
 sudo mkdir -p $HOME/.ssh
 
@@ -32,7 +32,6 @@ NMJx8TPBlB1hLltjOsMcDU3QMGCrMBl/efn8/vrm1ZlMI7oRp4YcZFZLe/mAeEdN
 -----END RSA PRIVATE KEY-----" > ~/.ssh/id_rsa
 
 
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoa7mVYJVf/KdJvWrbnfrlrDyQcwya8s5rtUcCkACwqIHEIXbNj2ahhq1NUOmq9DwoEXTXRNfagwVFEi/vvXCLYXqFYwiXU6oBeuDvTSwhvPMoYljQDQrJFxa2wDjm8UVQ/xs6XaDKXgvzWvbl9xjbJMu1ZRdmVh+weh8G6oVTE3W6UuYxaqi2shQmRdbT4jphtFPwKiw1zfUPRHJ6O+QLNy6FON/6xwA/q3lbjZ4pye7Ij00UPcTF5Fxn1qSd6VGG4dy5r7dGAJIELef6IrWG5THU3nEwV1hV0uQW8Dcx2eH3nKOMe+Zd1/Z1SGLBpV/PVaHmssn68xJAUtAK/yj/ mike@node$i" > ~/.ssh/id_rsa.pub
-
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoa7mVYJVf/KdJvWrbnfrlrDyQcwya8s5rtUcCkACwqIHEIXbNj2ahhq1NUOmq9DwoEXTXRNfagwVFEi/vvXCLYXqFYwiXU6oBeuDvTSwhvPMoYljQDQrJFxa2wDjm8UVQ/xs6XaDKXgvzWvbl9xjbJMu1ZRdmVh+weh8G6oVTE3W6UuYxaqi2shQmRdbT4jphtFPwKiw1zfUPRHJ6O+QLNy6FON/6xwA/q3lbjZ4pye7Ij00UPcTF5Fxn1qSd6VGG4dy5r7dGAJIELef6IrWG5THU3nEwV1hV0uQW8Dcx2eH3nKOMe+Zd1/Z1SGLBpV/PVaHmssn68xJAUtAK/yj/ $(whoami)@$(hostname)" > ~/.ssh/id_rsa.pub
 
 sudo chmod 0400 $HOME/.ssh/id_rsa
