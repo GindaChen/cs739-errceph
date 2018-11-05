@@ -1,7 +1,7 @@
 # Part 0
 
 NODES=(node0 node1 node2)
-# NODES=(ceph-node0 ceph-node1 ceph-node2)
+NODES=(ceph-node0 ceph-node1 ceph-node2)
 
 addnode(){
 	echo "export NODES=(node0 node1 node2)" > ~/.zshstart
@@ -12,9 +12,9 @@ addnode(){
 	echo $NODES
 }
 
-callall(){
+callall(){ # Function template to call all the nodes
 	for i `seq $LOWNODENUM $HIGHNODENUM`; do
-		ssh node$i "$1"
+		ssh ceph-node$i "$1"
 	done
 }
 
@@ -28,6 +28,7 @@ purgeall(){
 	# ceph-deploy forgetkeys node0 node1 node2
 	ceph-deploy forgetkeys $NODES
 	rm ceph.*
+	# Make sure the purgeme.py is in ceph-deploy:~/
 	for i in $NODES; do
 		echo Copy purgeme.py to $i
 		scp ~/purgeme.py $i:~/

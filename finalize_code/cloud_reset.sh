@@ -1,6 +1,7 @@
+################
 # Cloud Reset
 # The series of code deals with how to reset the cloud 
-
+################
 
 # Create Snapshot: If you want to create
 # disks="ceph-deploy ceph-node0 ceph-node1 ceph-node2 disk-1 disk-2 disk-3 disk-4 disk-5 disk-6"
