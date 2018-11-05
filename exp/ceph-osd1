@@ -1,0 +1,14 @@
+ceph-osd1
+	|--activate.monmap
+	|--ceph_fsid
+	|--current
+	|--fsid
+	|--journal
+	|--keyring
+	|--magic
+	|--osd_key
+	|--ready
+	|--store_version
+	|--superblock
+	|--type
+	|--whoami
